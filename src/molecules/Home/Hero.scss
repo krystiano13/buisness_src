@@ -1,0 +1,18 @@
+.Hero {
+  width: 100vw;
+  height: 50vh;
+  overflow-x: hidden;
+
+  &__image {
+    position: fixed;
+    z-index: 2;
+    display: block;
+
+    width: 95vw;
+    margin-left : 2.5vw;
+    height : 60vh;
+    transform: translateY(5vh);
+    background-size: cover;
+    object-fit: cover;
+  }
+}
