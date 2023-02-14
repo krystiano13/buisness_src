@@ -1,0 +1,33 @@
+.SectionTitle {
+    text-align: center;
+    font-weight: 400;
+    color: #808080;
+    font-size : 1.65vh;
+    text-transform: uppercase;
+    margin-top : 8vh;
+}
+
+.SectionSubtitle {
+    text-align: center;
+    font-weight: 400;
+    color : black;
+    font-size: 4.25vh;
+    margin-top : 1.5vh;
+    max-width: 50%;
+    margin-left: 25%;
+
+    @media screen and (orientation : portrait){
+        max-width: 95%;
+        margin-left: 2.5%;
+        font-size : 3vh;
+    }
+}
+
+.Divider {
+    width : 65vw;
+    height : 0.15vh;
+    background-color: gray;
+    opacity : 0.2;
+    margin-left : 17.5vw;
+    margin-top : 8vh;
+}

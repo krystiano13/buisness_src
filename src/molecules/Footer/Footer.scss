@@ -1,0 +1,14 @@
+.FooterWrapper {
+    width : 100vw;
+    height : 12vh;
+    
+    display : flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+        color : gray;
+        font-weight: 400;
+        font-size: 1.6vh;
+    }
+}

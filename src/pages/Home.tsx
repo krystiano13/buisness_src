@@ -1,13 +1,21 @@
-import React from 'react';
-import { Hero } from '../molecules/Home/Hero';
-import './Home.css';
+import React from "react";
+import { Hero } from "../molecules/Home/Hero/Hero";
+import { What } from "../molecules/Home/WhatWeBelieve/What";
+import { News } from "../molecules/Home/News/News";
+import { Grow } from "../molecules/Home/Grow/Grow";
+import { Footer } from "../molecules/Footer/Footer";
+import "./Home.css";
 
 const Home = () => {
-    return (
-        <div className='Home'>
-            <Hero />
-        </div>
-    )
-}
+  return (
+    <div className="Home">
+      <Hero />
+      <What />
+      <News />
+      <Grow />
+      <Footer />
+    </div>
+  );
+};
 
 export default Home;

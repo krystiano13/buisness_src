@@ -1,0 +1,38 @@
+.Article {
+    width : 20vw;
+    height : 40vh;
+
+    display : flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding : 1vh;
+    padding-top : 4.5vh;
+    padding-bottom: 4.5vh;
+
+    &__title {
+        font-size : 2.8vh;
+        font-weight: 500;
+        cursor: pointer;
+
+        transition: color 250ms;
+        will-change: color;
+    }
+
+    &__title:hover {
+        color : #555;
+    }
+
+    &__date {
+        color : rgb(167, 167, 167);
+        font-weight: 500;
+        font-size : 1.5vh;
+    }
+
+    &__text {
+        font-size : 1.8vh;
+        color : rgb(141, 141, 141);
+        font-weight: 400;
+        max-width : 95%;
+    }
+}

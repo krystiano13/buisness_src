@@ -1,0 +1,58 @@
+.Navbar {
+    width : 100vw;
+    height : 10vh;
+    overflow: hidden;
+
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-left : 2.5vw;
+    padding-right : 2.5vw;
+
+    &__contactButton {
+        width : 10vw;
+        height : 5vh;
+        font-size: 1.5vh;
+        color : white;
+        background-color: #222;
+        border: none;
+        cursor: pointer;
+
+        transition: background-color 250ms;
+        will-change: background-color;
+    }
+
+    &__contactButton:hover {
+        background-color: #444;
+    }
+
+    &__logo {
+        font-weight: 600;
+        color : black;
+        font-size : 3vh;
+        border-bottom : solid black 0.4vh;
+    }
+
+    &__buttons {
+        width : 25vw;
+        display : flex;
+        justify-content: space-around;
+
+        &__button {
+            font-size : 1.4vh;
+            border : none;
+            cursor: pointer;
+            background-color: transparent;
+            color : #888;
+            font-weight: 500;
+
+            transition: color 250ms;
+            will-change: color;
+        }
+
+        &__button:hover {
+            color : #555;
+        }
+    }
+}
