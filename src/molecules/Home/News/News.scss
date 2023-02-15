@@ -2,12 +2,22 @@
   width: 100vw;
   height: 60vh;
 
+  @media screen and (orientation: portrait) {
+    height : 150vh;
+  }
+
   &__ArticleContainer {
-    width : 65vw;
-    margin-top : 2.5vh;
+    width: 65vw;
+    margin-top: 2.5vh;
     margin-left: 17.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (orientation: portrait) {
+      width: 95vw;
+      margin-left: 2.5vw;
+      flex-direction: column;
+    }
   }
 }

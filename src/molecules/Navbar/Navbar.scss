@@ -1,58 +1,120 @@
-.Navbar {
-    width : 100vw;
-    height : 10vh;
-    overflow: hidden;
+@mixin button() {
+  font-size: 1.4vh;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #888;
+  font-weight: 500;
 
-    display : flex;
+  transition: color 250ms;
+  will-change: color;
+}
+
+.Navbar {
+  width: 100vw;
+  height: 10vh;
+  overflow: hidden;
+  position: relative;
+  z-index: 1000;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
+
+  &__hamburgerMenu {
+    width: 6vh;
+    height: 3vh;
+
+    cursor : pointer;
+
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    padding-left : 2.5vw;
-    padding-right : 2.5vw;
-
-    &__contactButton {
-        width : 10vw;
-        height : 5vh;
-        font-size: 1.5vh;
-        color : white;
-        background-color: #222;
-        border: none;
-        cursor: pointer;
-
-        transition: background-color 250ms;
-        will-change: background-color;
+    &__stripe {
+      width: 50%;
+      height: 0.3vh;
+      background-color: black;
     }
 
-    &__contactButton:hover {
-        background-color: #444;
+    #left {
+      width: 30%;
+      margin-right: 15%;
     }
 
-    &__logo {
-        font-weight: 600;
-        color : black;
-        font-size : 3vh;
-        border-bottom : solid black 0.4vh;
+    #right {
+      width: 30%;
+      margin-left: 15%;
+    }
+  }
+
+  &__contactButton {
+    width: 10vw;
+    height: 5vh;
+    font-size: 1.5vh;
+    color: white;
+    background-color: #222;
+    border: none;
+    cursor: pointer;
+
+    transition: background-color 250ms;
+    will-change: background-color;
+  }
+
+  &__contactButton:hover {
+    background-color: #444;
+  }
+
+  &__logo {
+    font-weight: 600;
+    color: black;
+    font-size: 3vh;
+    border-bottom: solid black 0.4vh;
+  }
+
+  &__buttons {
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+
+    &__button {
+      @include button();
     }
 
-    &__buttons {
-        width : 25vw;
-        display : flex;
-        justify-content: space-around;
-
-        &__button {
-            font-size : 1.4vh;
-            border : none;
-            cursor: pointer;
-            background-color: transparent;
-            color : #888;
-            font-weight: 500;
-
-            transition: color 250ms;
-            will-change: color;
-        }
-
-        &__button:hover {
-            color : #555;
-        }
+    &__button:hover {
+      color: #555;
     }
+  }
+}
+
+.ButtonsMenu {
+  width: 100vw;
+  height: 35vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+  transform: translateY(-45vh);
+
+  transition: transform 250ms;
+
+  &__button {
+    @include button();
+  }
+
+  &__button:hover {
+    color: #555;
+  }
+}
+
+.shown {
+  transform: translateY(0%);
 }
