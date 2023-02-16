@@ -22,7 +22,7 @@ const Navbar:React.FC<NavbarInterface> = ({ portrait }) => {
               <button className="Navbar__buttons__button">BLOG</button>
               <button className="Navbar__buttons__button">CONTACT</button>
             </section>
-            <button className="Navbar__button">CONTACT US</button>
+            <button className="Navbar__contactButton">CONTACT US</button>
           </>
         )}
 

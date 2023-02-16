@@ -1,8 +1,12 @@
 import React from "react";
 import './HeroElements.css';
 
-const HeroTitle = () => {
-  return <h1 className="HeroTitle">Grow your business.</h1>;
+interface HeroTitleInterface {
+  children : string
+}
+
+const HeroTitle:React.FC<HeroTitleInterface> = ({ children }) => {
+  return <h1 className="HeroTitle">{ children }</h1>;
 };
 
 export { HeroTitle };

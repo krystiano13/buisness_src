@@ -9,7 +9,7 @@ import "./Home.css";
 const Home = () => {
   return (
     <div className="Home">
-      <Hero />
+      <Hero title="Grow Your Business"/>
       <What />
       <News />
       <Grow />

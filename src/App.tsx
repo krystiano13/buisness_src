@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import { About } from "./pages/About";
 import { Navbar } from "./molecules/Navbar/Navbar";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Navbar portrait={portrait}/>
         <Routes>
           <Route path="/buisness/" element={<Home />} />
+          <Route path="/buisness/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </div>
