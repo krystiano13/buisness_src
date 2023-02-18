@@ -1,0 +1,67 @@
+.Projects {
+  width: 100vw;
+  height: 280vh;
+  overflow-x: hidden;
+
+  @media screen and (orientation: portrait) {
+    height: 175vh;
+  }
+
+  &__elements {
+    height: 260vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media screen and (orientation: portrait) {
+      height: 150vh;
+    }
+
+    &__el {
+      width: 90vw;
+      height: 66vh;
+
+      @media screen and (orientation: portrait) {
+        height: 50vh;
+      }
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &__img {
+        width: 70%;
+        height: 55vh;
+        margin-left: 15%;
+        cursor: pointer;
+
+        @media screen and (orientation: portrait) {
+          width: 90%;
+          height: 40vh;
+          margin-left: 5%;
+        }
+
+        transition: filter 250ms;
+        will-change: filter;
+      }
+
+      &__img:hover {
+        filter: brightness(125%);
+      }
+
+      &__title {
+        text-align: center;
+        font-size: 2.75vh;
+        font-weight: 400;
+      }
+
+      &__subtitle {
+        text-align: center;
+        font-size: 2.15vh;
+        font-weight: 300;
+        color: gray;
+      }
+    }
+  }
+}

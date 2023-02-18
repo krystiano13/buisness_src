@@ -1,5 +1,21 @@
-.Home {
+.Home, .Work, .Team {
     width : 100vw;
     overflow-x: hidden;
     height : auto;
+
+    &__Container {
+        width : 70vw;
+        margin-left: 15vw;
+        height : 150vh;
+        display : flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media screen and (orientation : portrait){
+            width : 100vw;
+            margin-left : 0;
+            height : 370vh;
+        }
+    }
 }

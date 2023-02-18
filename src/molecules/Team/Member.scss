@@ -1,0 +1,36 @@
+.TeamMember {
+    width : 18vw;
+    height : 56vh;
+
+    @media screen and (orientation : portrait){
+        width : 90vw;
+        height : 56vh;
+    }
+
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    &__blankImage {
+        width : 100%;
+        height : 84%;
+        background-color: rgb(241, 241, 241);
+        display : block;
+    }
+
+    &__name {
+        font-size: 2.6vh;
+        font-weight: 400;
+        color : black;
+        margin : 0;
+        display : block;
+    }
+
+    &__position {
+        font-size : 1.8vh;
+        font-weight: 300;
+        color : gray;
+        display: block;
+    }
+}

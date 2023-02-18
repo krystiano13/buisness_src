@@ -1,6 +1,8 @@
 import React from "react";
 import "./Navbar.css";
 
+import { useNavigate } from "react-router";
+
 interface NavbarInterface {
   portrait : boolean
 }
@@ -8,17 +10,30 @@ interface NavbarInterface {
 const Navbar:React.FC<NavbarInterface> = ({ portrait }) => {
   const menu = React.useRef<HTMLElement>(null);
   const handleMenuShow = () => menu.current?.classList.toggle('shown');
+  const navigate = useNavigate();
   return (
     <>
       <nav className="Navbar">
-        <p className="Navbar__logo">Business</p>
+        <p onClick={() => navigate("/buisness/")} className="Navbar__logo">
+          Business
+        </p>
 
         {portrait === false && (
           <>
             <section className="Navbar__buttons">
-              <button className="Navbar__buttons__button">ABOUT</button>
-              <button className="Navbar__buttons__button">WORK</button>
-              <button className="Navbar__buttons__button">TEAM</button>
+              <button
+                onClick={() => navigate("/buisness/about")}
+                className="Navbar__buttons__button"
+              >
+                ABOUT
+              </button>
+              <button
+                onClick={() => navigate("/buisness/work")}
+                className="Navbar__buttons__button"
+              >
+                WORK
+              </button>
+              <button className="Navbar__buttons__button" onClick={() => navigate('/buisness/team')}>TEAM</button>
               <button className="Navbar__buttons__button">BLOG</button>
               <button className="Navbar__buttons__button">CONTACT</button>
             </section>
