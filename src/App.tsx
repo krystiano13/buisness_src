@@ -5,6 +5,7 @@ import { About } from "./pages/About";
 import { Work } from "./pages/Work";
 import { Navbar } from "./molecules/Navbar/Navbar";
 import { Team } from "./pages/Team";
+import { Blog } from "./pages/Blog";
 
 const App = () => {
   const [portrait,setPortrait] = React.useState<boolean>(false);
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/buisness/about" element={<About />} />
           <Route path="/buisness/work" element={<Work />} />
           <Route path="/buisness/team" element={<Team />} />
+          <Route path="/buisness/blog" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </div>
