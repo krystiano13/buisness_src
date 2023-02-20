@@ -1,7 +1,21 @@
-.Home, .Work, .Team, .Blog {
+.Home, .Work, .Team, .Blog, .Contact, .Project {
     width : 100vw;
     overflow-x: hidden;
     height : auto;
+
+    &__mainContent {
+        width : 100vw;
+        height : 100vh;
+
+        display : flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media screen and (orientation : portrait){
+            height : 180vh;
+            flex-direction: column;
+        }
+    }
 
     &__Container {
         width : 70vw;

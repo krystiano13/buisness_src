@@ -1,0 +1,114 @@
+.ProjectContent {
+  width: 100vw;
+  height: 270vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media screen and (orientation: portrait) {
+    height: 180vh;
+  }
+
+  &__top {
+    width: 100vw;
+    height: 36vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20vw;
+    padding-right: 20vw;
+
+    @media screen and (orientation: portrait) {
+      flex-direction: column;
+      text-align: center;
+      height: 90vh;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+
+    &__left {
+      margin-right: 3vw;
+      width: 30%;
+      height: 36vh;
+
+      @media screen and (orientation: portrait) {
+        width: 100%;
+        align-items: center;
+        height: 28vh;
+      }
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      &__section {
+        height: auto;
+
+        &__title {
+          color: black;
+          font-size: 1.55vh;
+          font-weight: 500;
+          display: block;
+        }
+
+        &__text {
+          margin-top: 1vh;
+          font-weight: 400;
+          color: gray;
+          font-size: 1.6vh;
+        }
+      }
+    }
+
+    &__right {
+      margin-left: 3vw;
+      width: 70%;
+      height: 36vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      @media screen and (orientation: portrait) {
+        width: 100%;
+        height: 50vh;
+      }
+
+      &__paragraph {
+        font-size: 1.7vh;
+        color: gray;
+        font-weight: 400;
+        max-width: 100%;
+
+        @media screen and (orientation: portrait) {
+          font-size: 1.6vh;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    height: 204vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+     @media screen and (orientation : portrait){
+       height: 70vh;
+      }
+
+    &__image {
+      height: 60vh;
+
+      @media screen and (orientation : portrait){
+        height : auto;
+        width : 90vw;
+      }
+    }
+  }
+}

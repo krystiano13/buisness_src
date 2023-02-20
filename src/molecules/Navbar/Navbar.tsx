@@ -4,12 +4,12 @@ import "./Navbar.css";
 import { useNavigate } from "react-router";
 
 interface NavbarInterface {
-  portrait : boolean
+  portrait: boolean;
 }
 
-const Navbar:React.FC<NavbarInterface> = ({ portrait }) => {
+const Navbar: React.FC<NavbarInterface> = ({ portrait }) => {
   const menu = React.useRef<HTMLElement>(null);
-  const handleMenuShow = () => menu.current?.classList.toggle('shown');
+  const handleMenuShow = () => menu.current?.classList.toggle("shown");
   const navigate = useNavigate();
   return (
     <>
@@ -33,11 +33,31 @@ const Navbar:React.FC<NavbarInterface> = ({ portrait }) => {
               >
                 WORK
               </button>
-              <button className="Navbar__buttons__button" onClick={() => navigate('/buisness/team')}>TEAM</button>
-              <button className="Navbar__buttons__button">BLOG</button>
-              <button className="Navbar__buttons__button">CONTACT</button>
+              <button
+                className="Navbar__buttons__button"
+                onClick={() => navigate("/buisness/team")}
+              >
+                TEAM
+              </button>
+              <button
+                className="Navbar__buttons__button"
+                onClick={() => navigate("/buisness/blog")}
+              >
+                BLOG
+              </button>
+              <button
+                className="Navbar__buttons__button"
+                onClick={() => navigate("/buisness/contact")}
+              >
+                CONTACT
+              </button>
             </section>
-            <button className="Navbar__contactButton">CONTACT US</button>
+            <button
+              onClick={() => navigate("/buisness/contact")}
+              className="Navbar__contactButton"
+            >
+              CONTACT US
+            </button>
           </>
         )}
 
