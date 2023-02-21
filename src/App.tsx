@@ -8,6 +8,7 @@ import { Team } from "./pages/Team";
 import { Blog } from "./pages/Blog";
 import { Contact } from "./pages/Contact";
 import { Project } from "./pages/Project";
+import { BlogPost } from "./pages/BlogPost";
 
 const App = () => {
   const [portrait, setPortrait] = React.useState<boolean>(false);
@@ -43,6 +44,7 @@ const App = () => {
             path="/buisness/work/project-3"
             element={<Project projectId={3} />}
           />
+          <Route path="/buisness/blog/post-1" element={<BlogPost />} />
         </Routes>
       </BrowserRouter>
     </div>
