@@ -73,11 +73,36 @@ const Navbar: React.FC<NavbarInterface> = ({ portrait }) => {
       </nav>
       {portrait === true && (
         <section ref={menu} className="ButtonsMenu">
-          <button className="ButtonsMenu__button">ABOUT</button>
-          <button className="ButtonsMenu__button">WORK</button>
-          <button className="ButtonsMenu__button">TEAM</button>
-          <button className="ButtonsMenu__button">BLOG</button>
-          <button className="ButtonsMenu__button">CONTACT</button>
+          <button
+            onClick={() => navigate("/buisness/about")}
+            className="ButtonsMenu__button"
+          >
+            ABOUT
+          </button>
+          <button
+            onClick={() => navigate("/buisness/work")}
+            className="ButtonsMenu__button"
+          >
+            WORK
+          </button>
+          <button
+            onClick={() => navigate("/buisness/team")}
+            className="ButtonsMenu__button"
+          >
+            TEAM
+          </button>
+          <button
+            onClick={() => navigate("/buisness/blog")}
+            className="ButtonsMenu__button"
+          >
+            BLOG
+          </button>
+          <button
+            onClick={() => navigate("/buisness/contact")}
+            className="ButtonsMenu__button"
+          >
+            CONTACT
+          </button>
         </section>
       )}
     </>

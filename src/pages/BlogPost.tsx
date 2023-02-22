@@ -2,19 +2,26 @@ import React from "react";
 import './Home.css';
 import { Grow } from "../molecules/Home/Grow/Grow";
 import { Footer } from "../molecules/Footer/Footer";
-import placeholder1 from '../assets/images/placeholder1.svg';
 
-const BlogPost = () => {
+interface BlogPostInterface {
+  image : string
+  title : string
+}
+
+const BlogPost:React.FC<BlogPostInterface> = ({ image, title }) => {
+    React.useEffect(() => {
+      window.scrollTo(0,0);
+    },[]);
     return (
       <div className="BlogPost">
         <main className="BlogPost__post">
           <h2 className="BlogPost__post__title">
-            15 Best Blogs To Follow About Web Design
+            { title }
           </h2>
           <h3 className="BlogPost__post__date">February 21, 2019</h3>
           <img
             className="BlogPost__post__image"
-            src={placeholder1}
+            src={image}
             alt="image"
           />
           <h4 className="BlogPost__post__title2">

@@ -9,6 +9,7 @@ const BlogContainer = () => {
       {blogElements.map((item) => (
         <BlogElement
           key={item.id.toString()}
+          id={(item.id + 1).toString()}
           img={item.img}
           alt={item.alt}
           title={item.title}

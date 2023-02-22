@@ -6,10 +6,26 @@
   background-image: url('../../../assets/images/Hero.svg');
   background-size: cover;
   transform: translateX(2.5vw);
+
+  animation: appear 1.25s;
 }
 
 .black {
   background-color: #111;
   background-image: none;
   height : 55vh;
+}
+
+@keyframes appear {
+  0% {
+    opacity : 0;
+  }
+
+  10% {
+    opacity : 0;
+  }
+
+  100% {
+    opacity : 1;
+  }
 }
